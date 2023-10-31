@@ -42,7 +42,7 @@ for (var i = 0; i < 4; i++) { // we want to jump to string 4, but we've already 
 // and here we find the machine field
 var machineName = GetCString(buffer, out _).ToUpperInvariant();
 ```
-`machineName` is then searched for `X86_64` and `AMD64` substrings and if fails - the whole thing just refuses to work, because the only valid architecture, that doesn't lead to the exception throw.
+`machineName` is then searched for `X86_64` and `AMD64` substrings and if fails - the whole thing just refuses to work, because `x86_64` is the only accepted architecture down the line.
 
 ## Issue 
 #### LinuxSystem.cs:line 46
